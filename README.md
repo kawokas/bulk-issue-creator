@@ -1,5 +1,7 @@
 # マークダウンからissueを一括で作るやつ
 
+### dependency
+[GitHub CLI](https://github.com/cli/cli)
 
 ### Usage
 
