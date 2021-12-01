@@ -11,7 +11,7 @@
 
 ### [マークダウンのサンプル](https://github.com/kawokas/bulk-issue-creator/blob/master/example.md)
 
-```
+```markdown
 # issue test 1
 options: -a @me
 
