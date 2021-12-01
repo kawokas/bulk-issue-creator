@@ -23,8 +23,7 @@ const args = issues.map((issue) => {
   return { title, body, options }
 })
 
-args.forEach((arg) => {
-  const {title, body, options} = arg
+args.forEach(({title, body, options}) => {
   if(!title) {
     console.warn('warning: title is empty. skip this issue')
     return
