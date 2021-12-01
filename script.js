@@ -25,8 +25,9 @@ args.forEach((arg) => {
   const {title, body, options} = arg
   let command = `gh issue create --title "${title}" --body "${body}" ${options}`
   if(repo) {
-    command + ` -r ${repo}`
+    command += ` --repo ${repo}`
   }
+  console.log(command)
   const out = execSync(command)
   console.log(out.toString())
 })
