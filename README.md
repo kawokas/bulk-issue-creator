@@ -1,6 +1,9 @@
 # マークダウンからissueを一括で作るやつ
 
 ### dependency
+
+`node v16.13.0`
+
 [GitHub CLI](https://github.com/cli/cli)
 
 ### Usage
