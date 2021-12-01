@@ -5,7 +5,9 @@ const { execSync } = require('child_process')
 
 const mdFile = process.argv[2]
 const repo = process.argv[3]
-
+if(!repo) {
+  throw new Error('repo is undefined. please enter repo name')
+}
 fs.statSync(mdFile);
 
 const md = fs.readFileSync(mdFile,'utf8')
@@ -23,10 +25,7 @@ const args = issues.map((issue) => {
 
 args.forEach((arg) => {
   const {title, body, options} = arg
-  let command = `gh issue create --title "${title}" --body "${body}" ${options}`
-  if(repo) {
-    command += ` --repo ${repo}`
-  }
+  let command = `gh issue create --title "${title}" --body "${body}" --repo ${repo} ${options}`
   console.log(command)
   const out = execSync(command)
   console.log(out.toString())

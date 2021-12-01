@@ -5,13 +5,11 @@
 
 ### Usage
 
-`node script.js {markdown path} {repo name (optional)}`
-
+`node script.js {path/to/markdown} {repo/name}`
 
 - ISSUEは `---` で分割されます。
 - 見出し1はissueのタイトルとして扱われます。
 - `options: ~~` で始まる行はghにoptionとして渡されます。
-- それ以外の部分をbodyとして渡します。
 
 ### [マークダウンのサンプル](https://github.com/kawokas/bulk-issue-creator/blob/master/example.md)
 
